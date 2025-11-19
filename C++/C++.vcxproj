@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props')" />
   <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props')" />
-  <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -140,16 +140,16 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.targets')" />
     <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets')" />
+    <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.Cuda.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.Cuda.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets'))" />
   </Target>
 </Project>
