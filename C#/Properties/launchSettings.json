@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Debug": {
+      "commandName": "Project",
+      "workingDirectory": "$(SolutionDir)"
+    },
+    "Mixed Debugging": {
+      "commandName": "Project",
+      "workingDirectory": "$(SolutionDir)",
+      "nativeDebugging": true
+    }
+  }
+}

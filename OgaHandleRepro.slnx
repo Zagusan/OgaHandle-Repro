@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="C#/C#.csproj" Id="6690ec19-7be8-4346-9ff2-da44784d83b0" />
+  <Project Path="C++/C++.vcxproj" Id="f853a94a-b11b-4533-bcfd-55063c46f2bb" />
+</Solution>
