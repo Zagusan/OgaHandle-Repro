@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <stdexcept>
 #include "ort_genai.h"
 
 static OgaHandle* CreateOgaHandle()
@@ -18,7 +19,18 @@ static void DestroyOgaHandle(OgaHandle*& handle)
 static std::unique_ptr<OgaModel> LoadRandomGPT2()
 {
     std::cout << "Loading Random GPT2. . ." << std::endl;
-    return OgaModel::Create("tiny-random-gpt2-fp32/");
+    std::unique_ptr<OgaConfig> config;
+    try
+    {
+        config = OgaConfig::Create("tiny-random-gpt2-fp32/");
+    }
+    catch (std::runtime_error& e)
+    {
+        std::cout << "An error ocurred while creating OgaConfig. Ensure that Random GPT-2 is placed in the working directory." << std::endl;
+        std::cerr << e.what() << std::endl;
+        throw e;
+    }
+    return OgaModel::Create(*config);
 }
 
 static void UnloadModel(std::unique_ptr<OgaModel>& model)

@@ -19,8 +19,20 @@ namespace Repro
         static Model LoadRandomGPT2()
         {
 			Console.WriteLine("Loading Random GPT-2. . .");
-			using Config modelConfig = new("tiny-random-gpt2-fp32/");
-			return new Model(modelConfig);
+			Config config;
+			try
+			{
+				config = new("tiny-random-gpt2-fp32/");
+			}
+			catch (OnnxRuntimeGenAIException e)
+			{
+				Console.WriteLine("An error ocurred while creating OgaConfig. Ensure that Random GPT-2 is placed in the working directory.");
+				Console.WriteLine(e.Message);
+				throw;
+			}
+			Model model = new(config);
+			config.Dispose();
+			return model;
 		}
 		static void UnloadModel(in Model model)
 		{
