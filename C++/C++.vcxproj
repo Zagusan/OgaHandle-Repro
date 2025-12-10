@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props')" />
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.props')" />
   <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -144,7 +144,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets')" />
-    <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets')" />
+    <Import Project="..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -152,7 +152,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.23.2\build\native\Microsoft.ML.OnnxRuntime.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.2\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntimeGenAI.0.11.3\build\native\Microsoft.ML.OnnxRuntimeGenAI.targets'))" />
   </Target>
 </Project>
